@@ -1,35 +1,46 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from "react";
+import "./App.css";
+import myImage from "./assets/images/me.jpg";
+import gitHubLogo from "./assets/images/github.png";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+      <div className="flex justify-center overflow-hidden mb-8">
+        <img
+          className="rounded-full h-52 w-52 object-cover"
+          src={myImage}
+          alt="Description of the image"
+        />
+      </div>
+
+      <div
+        className="text-3xl font-MyFontBold"
+        style={{ fontFamily: "MyFontBold" }}
+      >
+        <h1>Hi, I am Philipp</h1>
+      </div>
+      <div style={{ fontFamily: "MyFont" }}>
+        {/* Your component content here */}
+        <p>This is my Website.</p>
+      </div>
+      <div className="flex justify-center">
+        <a
+        target="_blank"
+          href="https://github.com/philipprobin"
+          className="p-4 hover:bg-gray-100 duration-200"
+        >
+          <img
+            className= 'h-20 w-20'
+            src={gitHubLogo}
+            alt="Description of the image"
+          />
         </a>
       </div>
-      <h1>Philipp Sowik</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
