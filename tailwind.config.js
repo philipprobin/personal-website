@@ -7,7 +7,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        custom: ['MyFontBold', 'sans-serif'],
+        customBold: ['MyFontBold', 'sans-serif'],
+        custom: ['MyFont', 'sans-serif'],
+
       }},
   },
   plugins: [],

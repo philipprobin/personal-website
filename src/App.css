@@ -49,12 +49,12 @@
 @font-face {
   font-family: 'MyFontBold';
   font-style: bold;
-  src: local('MyFont'), url('./src/assets/fonts/TT Interphases Pro Mono Trial Bold.ttf') format('truetype');
+  src: url('/src/assets/fonts/TT\ Interphases\ Pro\ Mono\ Trial\ Bold.ttf') format('truetype');
 }
 @font-face {
   font-family: 'MyFont';
   font-style: regular;
-  src: local('MyFont'), url('./src/assets/fonts/TT Interphases Pro Mono Trial Regular.ttf') format('truetype');
+  src: url('/src/assets/fonts/TT\ Interphases\ Pro\ Mono\ Trial\ Regular.ttf') format('truetype');
 }
 
 /* Usage */
