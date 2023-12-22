@@ -46,7 +46,7 @@ function App() {
       >
         {/* Your component content here */}
         <ul
-          className="ml-14"
+          className="md:ml-14"
           style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}
         >
           <li>Create value</li>
@@ -65,7 +65,7 @@ function App() {
       >
         {/* Your component content here */}
         <ul
-          className="ml-14"
+          className="md:ml-14"
           style={{ listStyleType: "disc", paddingLeft: "1.5rem" }}
         >
           <li>Having a sustainable impact on society with the work I do</li>
