@@ -10,6 +10,7 @@ import mainImage from "./assets/images/flashlate/main.jpg";
 import personalImage from "./assets/images/flashlate/personal.jpg";
 import practiceImage from "./assets/images/flashlate/practice.jpg";
 import {useState} from "react";
+import {useSwipeable} from "react-swipeable";
 
 function App() {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -19,6 +20,14 @@ function App() {
     const handleIndicatorClick = (index) => {
         setCurrentImageIndex(index);
     };
+
+    // Swipe handlers
+    const swipeHandlers = useSwipeable({
+        onSwipedLeft: () => setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length),
+        onSwipedRight: () => setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length),
+    });
+
+
 
     return (
         <>
@@ -117,8 +126,8 @@ function App() {
                 </div>
 
                 {/* Carousel Section */}
-                <div className="md:w-1/2 p-4 flex flex-col items-center">
-                    <div className="overflow-hidden rounded-lg shadow-lg h-[48rem] w-auto">
+                <div className="md:w-1/2 p-4 flex flex-col items-center" {...swipeHandlers}>
+                    <div className="overflow-hidden rounded-lg shadow-lg h-[48rem] md:h-[48rem] sm:h-[30rem] xs:h-[20rem] w-auto">
                         <img src={images[currentImageIndex]} alt="Flashlate App Preview"
                              className="h-full w-full object-cover"/>
                     </div>
