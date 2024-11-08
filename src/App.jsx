@@ -127,7 +127,9 @@ function App() {
 
                 {/* Carousel Section */}
                 <div className="md:w-1/2 p-4 flex flex-col items-center" {...swipeHandlers}>
-                    <div className="overflow-hidden rounded-lg shadow-lg h-[48rem] md:h-[48rem] sm:h-[30rem] xs:h-[20rem] w-auto">
+                    <div
+                        className="overflow-hidden rounded-lg shadow-lg lg:h-[48rem] md:h-[40rem] sm:h-[24rem] xs:h-[16rem] w-auto">
+
                         <img src={images[currentImageIndex]} alt="Flashlate App Preview"
                              className="h-full w-full object-cover"/>
                     </div>
