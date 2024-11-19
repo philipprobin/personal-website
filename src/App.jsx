@@ -41,7 +41,7 @@ function App() {
                 <ul className="md:ml-14" style={{listStyleType: "disc", paddingLeft: "1.5rem"}}>
                     <li>Create value</li>
                     <li>Fail fast</li>
-                    <li>Dive into electronic music production</li>
+                    <li>Share unforgettable moments with my music</li>
                     <li>Make a living from my ideas</li>
                 </ul>
             </div>

@@ -11,6 +11,10 @@ const Carousel = ({ images }) => {
         setCurrentImageIndex(index);
     };
 
+    const handleImageClick = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
     const swipeHandlers = useSwipeable({
         onSwipedLeft: () => setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length),
         onSwipedRight: () => setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length),
@@ -26,7 +30,8 @@ const Carousel = ({ images }) => {
                 <img
                     src={images[currentImageIndex]}
                     alt={`Slide ${currentImageIndex + 1}`}
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-cover cursor-pointer" // Add cursor-pointer for clickable indication
+                    onClick={handleImageClick} // Handle image click
                 />
             </div>
 
