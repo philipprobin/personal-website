@@ -6,6 +6,8 @@ import gitHubLogo from "./assets/images/github.png";
 import linkedInLogo from "./assets/images/linkedin.png";
 import Flashlate from "./projects/Flashlate.jsx";
 import SparMahl from "./projects/SparMahl.jsx";
+import VaccineCheck from "./projects/VaccineCheck.jsx";
+
 
 function App() {
 
@@ -65,9 +67,10 @@ function App() {
 
             <Flashlate/>
             <SparMahl/>
+            <VaccineCheck/>
 
             <div className="text-l font-customBold mt-8 mb-6">
-                <h1>Last update: 19. Nov 2024</h1>
+                <h1>Last update: 10. Dec 2024</h1>
             </div>
             <div className="flex justify-center">
                 <div className="p-4 hover:bg-gray-100 duration-200">
