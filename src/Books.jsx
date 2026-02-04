@@ -5,7 +5,7 @@ import breatheImage from '../src/assets/images/books/breathe.jpg';
 
 function Books() {
     return (
-        <div>
+        <div className="font-custom">
             <h1 className="text-3xl font-customBold text-left mb-8">Books I read</h1>
 
             <h2 className="text-2xl font-customBold p-4">Breath by James Nestor</h2>
