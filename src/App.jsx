@@ -4,29 +4,47 @@ import "./App.css";
 import myImage from "./assets/images/me.jpg";
 import gitHubLogo from "./assets/images/github.png";
 import linkedInLogo from "./assets/images/linkedin.png";
-import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 import Apps from './Apps';
 import Books from './Books';
+import { BrowserRouter as Router, Route, Link, Routes, useLocation } from 'react-router-dom';
+function NavBar() {
+  const location = useLocation();
 
-function App() {
+  const isHome = location.pathname === "/";
+
   return (
-    <Router>
-      <div className="flex justify-end p-4">
-        <div>
-          <Link 
-            to="/apps" 
-            className="mr-4 font-customBold inline-block p-4 rounded-lg shadow transition-transform transform hover:scale-110 hover:shadow-lg" 
+      <div className="flex justify-between items-center p-4">
+        {!isHome && (
+            <Link
+                to="/"
+                className="font-customBold inline-block p-3 rounded-lg shadow transition-transform transform hover:scale-110 hover:shadow-lg"
+            >
+              ← Back
+            </Link>
+        )}
+
+        <div className="ml-auto">
+          <Link
+              to="/apps"
+              className="mr-4 font-customBold inline-block p-4 rounded-lg shadow transition-transform transform hover:scale-110 hover:shadow-lg"
           >
             Apps
           </Link>
-          <Link 
-            to="/books" 
-            className="font-customBold inline-block p-4 rounded-lg shadow transition-transform transform hover:scale-110 hover:shadow-lg" 
+          <Link
+              to="/books"
+              className="font-customBold inline-block p-4 rounded-lg shadow transition-transform transform hover:scale-110 hover:shadow-lg"
           >
             Books
           </Link>
         </div>
       </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <NavBar />
       <Routes>
         <Route path="/apps" element={<Apps />} />
         <Route path="/books" element={<Books />} />
@@ -49,10 +67,10 @@ function App() {
                 <p>
                   I am a Software Developer interested in AI and Entrepreneurship.
                   <br />
-                  I love developing apps and exploring new things.
+                  I love developing apps, developing AI related stuff and exploring new things.
                   <br />
-                  Currently I am living in Langenfeld and working on my Start-up SemanticMap and some side projects
-                  while reading books and practicing for a half-marathon.
+                  Currently I am living in Bonn and working on my Start-up SemanticMap and some side projects
+                  while reading books and hitting the gym.
                   <br />
                   I enjoy exploring various cultures and engaging in games like chess and basketball.
                 </p>
@@ -83,7 +101,7 @@ function App() {
               </div>
 
               <div className="text-l font-customBold mt-8 mb-6">
-                <h1>Last update: 08. Feb 2025</h1>
+                <h1>Last update: 04. Feb 2026</h1>
               </div>
               <div className="flex justify-center">
                 <div className="p-4 hover:bg-gray-100 duration-200">
